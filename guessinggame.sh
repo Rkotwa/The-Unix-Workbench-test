@@ -10,7 +10,7 @@ else
 fi
 }
 
-files=$( ls -la | grep -v "^-" | wc -l )
+files=$( ls -la | grep "^-" | wc -l )
 echo "How many files is in this directory?"
 read howmany
 
