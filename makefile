@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
-# File: makefile
-
-touch README.md
-
-	echo "# The-Unix-Workbench-test" > README.md
-	echo "## Date" >> README.md
-	date "+%Y-%m-%d %H:%M:%S" >> README.md
-	echo "## Lines in guessinggame.sh" >> README.md
-	grep -c '' guessinggame.sh >> README.md
+create: 
+	touch README.md
+	
+add:
+	echo "# The-Unix-Workbench-test" >> README.md
+	echo "# Date" >> README.md
+	date "+%d-%m-%Y %T" >> README.md
+	echo "Line in file" >> README.md
+	wc -l guessinggame.sh | egrep -o "[0-9]+" >> README.md
+clean:
+	rm README.md

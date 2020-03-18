@@ -10,14 +10,14 @@ else
 fi
 }
 
-files=$( ls -1q | wc -l )
+files=$( ls -la | grep -v "^-" | wc -l )
 echo "How many files is in this directory?"
 read howmany
 
 while [[ $files -ne $howmany ]]
 do
 	testvalue
-	echo "Wrong, type again"
+	echo "Try again"
 read howmany
 
 done
